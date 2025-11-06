@@ -1,10 +1,19 @@
-venv/
+# Exclude everything Git ignores
+.git
+.gitignore
+
+# Exclude caches and local environments
 __pycache__/
-.git/
 *.pyc
-*.pyo
-*.pyd
+venv/
+.venv/
+build/
+dist/
+*.egg-info/
 .env
-logs/
-datasets/
-checkpoints/
+.DS_Store
+.idea/
+.vscode/
+
+# Node/frontend cache (if any)
+node_modules/
