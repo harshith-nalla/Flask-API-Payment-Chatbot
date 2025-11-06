@@ -1,37 +1,4 @@
-# # main.py
-# from fastapi import FastAPI, HTTPException
-# from fastapi.middleware.cors import CORSMiddleware
-# from models.request_models import ChatRequest, EndRequest
-# from models.response_models import ChatResponse, EndResponse
-# from core.orchestrator import process_user_query
 
-# app = FastAPI(title="Payment Chatbot API", version="1.0.0")
-
-# # CORS (optional)
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["*"],
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
-
-# @app.get("/health")
-# def health():
-#     return {"status": "ok"}
-
-# @app.post("/chat", response_model=ChatResponse)
-# def chat(req: ChatRequest):
-#     try:
-#         result = process_user_query(req.message, session_id=req.session_id)
-#         return ChatResponse(**result)
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
-
-# @app.post("/end", response_model=EndResponse)
-# def end(req: EndRequest):
-#     result = process_user_query("end", session_id=req.session_id)
-#     return EndResponse(**result)
 
 import os
 from fastapi.staticfiles import StaticFiles
